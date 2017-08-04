@@ -1,6 +1,17 @@
 body {
-  background-color: $black;
-  padding: 3rem;
+  padding: 2rem;
+
+  background: #67b26f;
+  @include background(linear-gradient(to right, #67b26f, #4ca2cd));
+
+  section {
+    width: 100%;
+    padding: 2rem;
+    @include box-sizing(border-box);
+
+    background-color: $white;
+    box-shadow: 0 .5rem .5rem 0 transparentize($black, .5);
+  }
 }
 
 h1 {

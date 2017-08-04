@@ -14,52 +14,9 @@ html
 
     link(rel='stylesheet', type='text/css', href='all.css')
   body
-      h1 
-        span.title Adrien Cadet / 
-        span.subtitle Android Software Engineer
-        
-      h2 
-        a(href='http://acadet.github.io/web-resume/') Résumé
+    
+    section
       
-      h2 
-        a(href='https://www.linkedin.com/in/adriencadet') LinkedIn
-        
-      h2 
-        a(href='https://github.com/acadet') Github
-        
-      h2 
-        a(href='https://twitter.com/CadetAdrien') Twitter
-        
-      h3 Recent Work
+      include body  
       
-      ul
-        li
-          a(href='https://acadet.github.io/tiramisu/') Tiramisu
-          | 
-          | / Complete list of Android SDK UI components.
-        li
-          a(href='http://vagabond.adriencadet.com/') Vagabond
-          | 
-          | / Collections of pictures I took around the world.
-          
-      h3 Blog Posts
-      
-      h4 Rails School
-        
-      ul
-        each val in rails
-          +post(val[0], val[1], val[2])
-      
-      h4 Coshx Labs
-        
-      ul
-        each val in coshx
-          +post(val[0], val[1], val[2])
-      
-      h4 Medium
-        
-      ul
-        each val in medium
-          +post(val[0], val[1], val[2])
-      
-      include footer
+    include footer
