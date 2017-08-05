@@ -1,47 +1,51 @@
-h1 
-  span.title Adrien Cadet / 
-  span.subtitle Android Software Engineer
+section
+  .block
+  h1.name Adrien Cadet
+  h1 Android Software Engineer
+  .small-block
+  h1.arrow &dArr;
   
-h2 
-  a(href='http://acadet.github.io/web-resume/') Résumé
-
-h2 
-  a(href='https://www.linkedin.com/in/adriencadet') LinkedIn
-  
-h2 
-  a(href='https://github.com/acadet') Github
-  
-h2 
-  a(href='https://twitter.com/CadetAdrien') Twitter
-  
-h3 Recent Work
-
-ul
-  li
-    a(href='https://acadet.github.io/tiramisu/') Tiramisu
+section
+  h2 
+    a(href='http://acadet.github.io/web-resume/') Résumé
     | 
-    | / Complete list of Android SDK UI components.
-  li
-    a(href='http://vagabond.adriencadet.com/') Vagabond
+    | / 
+    a(href='https://www.linkedin.com/in/adriencadet') LinkedIn
     | 
-    | / Collections of pictures I took around the world.
+    | / 
+    a(href='https://github.com/acadet') Github
+    | 
+    | / 
+    a(href='https://twitter.com/CadetAdrien') Twitter
     
-h3 Blog Posts
+  h3 Recent Work
 
-h4 Rails School
-  
-ul
-  each val in rails
-    +post(val[0], val[1], val[2])
+  ul
+    li
+      a(href='https://acadet.github.io/tiramisu/') Tiramisu
+      | 
+      | / Complete list of Android SDK UI components.
+    li
+      a(href='http://vagabond.adriencadet.com/') Vagabond
+      | 
+      | / Collections of pictures I took around the world.
+      
+  h3 Blog Posts
 
-h4 Coshx Labs
-  
-ul
-  each val in coshx
-    +post(val[0], val[1], val[2])
+  h4 Rails School
+    
+  ul
+    each val in rails
+      +post(val[0], val[1], val[2])
 
-h4 Medium
-  
-ul
-  each val in medium
-    +post(val[0], val[1], val[2])
+  h4 Coshx Labs
+    
+  ul
+    each val in coshx
+      +post(val[0], val[1], val[2])
+
+  h4 Medium
+    
+  ul
+    each val in medium
+      +post(val[0], val[1], val[2])

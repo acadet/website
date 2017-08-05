@@ -1,36 +1,77 @@
 body {
-  padding: 2rem;
+  padding: 0;
+  margin: 0;
+}
 
-  background: #67b26f;
-  @include background(linear-gradient(to right, #67b26f, #4ca2cd));
+.body-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
 
-  section {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+
+  section:first-child {
+    width: 100%;
+    height: 100%;
+    @include display(flex);
+    @include align-items(center);
+    @include justify-content(center);
+    @include flex-direction(column);
+
+    background: {
+      image: url('imgs/background.jpg');
+      size: cover;
+      position: center;
+      repeat: no-repeat;
+    }
+
+    .block {
+      @include flex(1);
+    }
+
+    .small-block {
+      @include flex(.5);
+    }
+  }
+
+  section:last-child {
     width: 100%;
     padding: 2rem;
     @include box-sizing(border-box);
-
-    background-color: $white;
-    box-shadow: 0 .5rem .5rem 0 transparentize($black, .5);
   }
 }
 
 h1 {
-  color: $yellow;
-  margin: 0 0 3rem 0;
+  color: $white;
+  text-align: center;
 
-  .title {
+  &.name {
+    margin: 1rem 1rem 0 1rem;
+
     font: {
       family: $headline;
-      size: 3rem;
+      size: 3.5rem;
+    }
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    text-shadow: 2px 2px transparentize($black, .9);
+  }
+
+  &:not(.name) {
+    margin: 1rem;
+
+    font: {
+      family: $body;
+      size: 2rem;
+      weight: lighter;
     }
   }
 
-  .subtitle {
-    font: {
-      family: $body;
-      size: 2.5rem;
-      weight: normal;
-    }
+  &.arrow {
+    //TODO
   }
 }
 
@@ -43,20 +84,23 @@ h2 {
 
   a {
     &, &:visited {
-      padding-bottom: 5px;
+      padding: 5px 10px;
 
       font-size: 2rem;
-      color: $green;
+      line-height: 4rem;
+      color: $black;
       text-decoration: none;
 
       border-bottom: 4px solid $green;
-      @include transition(border-bottom-color .5s ease, color .5s ease);
+      background-color: transparent;
+      @include transition(background-color .5s ease, color .5s ease);
     }
 
     &:hover {
       text-decoration: none;
+
       color: $white;
-      border-bottom-color: $white;
+      background-color: $green;
     }
   }
 }
@@ -64,15 +108,15 @@ h2 {
 h3 {
   margin: 3rem 0 1rem 0;
 
-  font-size: 1.5rem;
-  color: $purple;
+  font-size: 1.6rem;
+  color: $black;
 }
 
 h4 {
-  margin: 2rem 0 1rem 0;
+  margin: 2rem 0 1rem 1rem;
 
   font-size: 1.3rem;
-  color: $blue;
+  color: $black;
 }
 
 ul {
@@ -98,22 +142,22 @@ ul {
 
     font-size: 1rem;
     line-height: 1.5rem;
-    color: $blue;
+    color: $black;
 
     a {
       &, &:visited {
         color: inherit;
         text-decoration: none;
 
-        border-bottom: 1px solid $blue;
+        border-bottom: 1px solid $black;
         @include transition(border-bottom-color .5s ease, color .5s ease);
       }
 
       &:hover {
-        color: $white;
+        color: $green;
         text-decoration: none;
 
-        border-bottom-color: $white;
+        border-bottom-color: $green;
       }
     }
   }
