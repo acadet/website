@@ -21,7 +21,7 @@ body {
     @include flex-direction(column);
 
     background: {
-      image: url('imgs/background.jpg');
+      image: url('background.jpg');
       size: cover;
       position: center;
       repeat: no-repeat;
@@ -71,6 +71,8 @@ h1 {
   }
 
   &.arrow {
+    text-shadow: 2px 2px transparentize($black, .9);
+    
     @keyframes move-arrow {
       from {
         @include transform(translateY(0px));
