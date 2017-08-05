@@ -116,12 +116,16 @@ module.exports = function (grunt) {
         },
         copy: {
           dev: {
-            src: ['imgs/**', 'fonts/**'],
-            dest: 'dev/'
+            src: ['imgs/**', 'fonts/**', 'favicons/**'],
+            dest: 'dev/',
+            expand: true,
+            flatten: true
           },
           prod: {
-            src: ['imgs/**', 'fonts/**'],
-            dest: 'prod/'
+            src: ['imgs/**', 'fonts/**', 'favicons/**'],
+            dest: 'prod/',
+            expand: true,
+            flatten: true
           }
         }
     });
