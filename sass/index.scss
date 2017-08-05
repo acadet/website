@@ -48,7 +48,7 @@ h1 {
   text-align: center;
 
   &.name {
-    margin: 1rem 1rem 0 1rem;
+    margin: 0 1rem;
 
     font: {
       family: $headline;
@@ -71,7 +71,16 @@ h1 {
   }
 
   &.arrow {
-    //TODO
+    @keyframes move-arrow {
+      from {
+        @include transform(translateY(0px));
+      }
+
+      to {
+        @include transform(translateY(-30px));
+      }
+    }
+    @include animation(2s ease infinite alternate move-arrow);
   }
 }
 
